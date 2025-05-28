@@ -55,6 +55,7 @@ output_file_name = "RegHelix_Raw_2.txt"
 
 extract_geometry_from_dxf(dxf_file_name, output_file_name)
 ```
+---
 # GetTrajectories
 Esta carpeta contiene los scripts para procesar y generar trayectorias en AeroBasic a partir de datos CAD.
 
@@ -83,6 +84,7 @@ process_trayectorias(
     precision=6  # Ajusta la tolerancia del redondeo (0–10)
 )
 ```
+---
 ### Script: `CADTrajectory2AB.py`
 
 #### Descripción general
@@ -115,9 +117,12 @@ OVERLAP = 0.5
 # Lee el archivo de parámetros, genera trayectorias, visualiza y produce el código AeroBasic
 # (Ver el script para más detalles)
 ```
+---
 ## GetPlanes
 
 Esta carpeta contiene los scripts para procesar y generar planos en AeroBasic a partir de datos CAD.
+
+---
 
 ### Script: `process_planes.py`
 
@@ -146,6 +151,8 @@ os.chdir(directory)
 input_file = 'DiagPlane_Raw.txt'
 output_file = 'planos_procesadosDiagPlane.txt'
 ```
+---
+
 ### Script: `Planes2AB_Raster.py`
 
 #### Descripción general
@@ -176,6 +183,9 @@ os.chdir(directory)
 planes = parse_planos("planos_procesadosDiagPlane.txt")
 generate_aerobasic_plane_fill_code(planes, filename="DiagPlane_Raster_CAD2AB.txt")
 ```
+
+---
+
 ### Script: `Planes2AB_Spiral.py`
 
 #### Descripción general
@@ -301,5 +311,4 @@ os.chdir(directory)
 filename = "PlanoXZ_Spiralv2_CAD2AB (3).txt"
 estimate_time(filename)
 ```
----
 
