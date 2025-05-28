@@ -13,7 +13,9 @@ pip install ezdxf numpy matplotlib shapely
 # Or, using Anaconda
 conda install -c conda-forge ezdxf numpy matplotlib shapely
 ```
+
 ---
+
 ## Notes
 
 Units in the DXF file are expected to be in micrometers.
@@ -23,6 +25,7 @@ The origin in the generated AeroBasic code is set relative to the point with the
 Margins of 10 µm (XY) and 100 µm (Z) are added for safe motion planning.
 
 ---
+
 ## Usage of all scripts:
 1. **Set the working directory** where input file is located (this is where output file will land).
 2. **Run the script:**
@@ -30,8 +33,8 @@ Margins of 10 µm (XY) and 100 µm (Z) are added for safe motion planning.
     python file_name.py
     ``` 
 3. **Output:** Usually a .txt file or a print in console.
----
 
+---
 
 ## Script: `dxftotxt.py`
 
@@ -60,9 +63,13 @@ output_file_name = "RegHelix_Raw_2.txt"
 extract_geometry_from_dxf(dxf_file_name, output_file_name)
 ```
 
+---
+
 ## GetTrajectories
 
 This folder contains the scripts for processing and generating trajectories in AeroBasic from CAD data:
+
+---
 
 
 ### Script: `process_trayec.py`
@@ -90,7 +97,6 @@ process_trayectorias(
     precision=6  # Adjust tolerance of rounding (0-10)
 )
 ```
-
 
 ---
 
@@ -127,6 +133,9 @@ OVERLAP = 0.5
 # (See script for full details)
 ```
 
+---
+
+
 
 ## GetPlanes
 This folder contains the scripts for processing and generating planes in AeroBasic from CAD data.
@@ -157,8 +166,11 @@ directory = r'C:\Users\Daniel\Desktop\Uni\Python\TFG\GetPlanes\DiagPlane'
 os.chdir(directory)
 input_file = 'DiagPlane_Raw.txt'
 output_file = 'planos_procesadosDiagPlane.txt'
-
 ```
+
+---
+
+
 ### Script: `Planes2AB_Raster.py`
 
 #### Overview
@@ -189,6 +201,9 @@ os.chdir(directory)
 planes = parse_planos("planos_procesadosDiagPlane.txt")
 generate_aerobasic_plane_fill_code(planes, filename="DiagPlane_Raster_CAD2AB.txt")
 ```
+
+---
+
 
 ### Script: `Planes2AB_Spiral.py`
 
@@ -256,8 +271,9 @@ OVERLAP = 0.5
 # Run main() to process and visualize
 ```
 
-
 ---
+
+
 ### Script: `Planes2AB_ShutterTrajec.py`
 
 #### Overview
@@ -294,6 +310,7 @@ python Planes2AB_ShutterTrajec.py
 ```
 
 ---
+
 ## Script: `time_estimate.py`
 
 ### Overview
