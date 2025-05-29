@@ -24,6 +24,8 @@ The origin in the generated AeroBasic code is set relative to the point with the
 
 Margins of 10 µm (XY) and 100 µm (Z) are added for safe motion planning.
 
+To automatically detect whether each entity belongs to a linear trajectory or a planar fill, use any positive value of lineweight for the closed entity to represent a plane.
+
 ---
 
 ## Usage of all scripts:
