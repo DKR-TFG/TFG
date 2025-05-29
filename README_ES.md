@@ -18,6 +18,8 @@ conda install -c conda-forge ezdxf numpy matplotlib shapely
 - Se espera que las unidades en el archivo DXF estén en micrómetros.  
 - El origen en el código AeroBasic generado se sitúa respecto al punto con menor X y Y y mayor valor de Z.  
 - Se añaden márgenes de 10 µm (XY) y 100 µm (Z) para una planificación de movimiento segura.  
+- Para diferenciar automaticamente entre trayectorias y planos, emplea cualquier valor positivo para el grosor de la línea en la entidad (o entidades) cerrada/s para representar un plano.
+
 
 ## Uso de todos los scripts
 
